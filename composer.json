@@ -1,0 +1,46 @@
+{
+    "name": "rinku/laravel-auth-logs",
+    "description": "A package to store and manage user authentication attempt & it's logs",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "user authentication",
+        "authentication logs",
+        "eloquent",
+        "laravel events"
+    ],
+    "authors": [
+        {
+            "name": "Rinku Budania",
+            "email": "rinkujat25@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^8.0|^9.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "4.*|5.*|6.*",
+        "mockery/mockery": "^0.9.4 || ~1.0",
+        "phpunit/phpunit": "^8.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Rinku\\Authlogs\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rinku\\Authlogs\\AuthLogsServiceProvider"
+            ],
+            "aliases": {
+                "RinkuAuthlogs": "Rinku\\Authlogs\\Facade"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    }
+}
